@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homepage</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <footer class="footer-animate">
+        <div class="logo">
+            <img src="es logo.jpg" alt="logo" class="animate__animated animate__bounceInLeft">
+        </div>
+        <div class="footer-content">
+            <h1 class="animate__animated animate__fadeInUp">WELCOME TO <br>ECLIPSE SANCTUARY !</h1>
+            <p><a href="homepage.html">Homepage</a> <a href="The Health Info page.html">Health Info Page</a><a href="CALCULATE YOUR BMI HERE!.html">BMI Calculator</a></p>
+        </div>
+    </footer>
+	<div class="hero-section">
+  <div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="video1" width="420">
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.ogg" type="video/ogg">
+    Your browser does not support HTML video.
+  </video>
+</div> 
+
+<script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+</script> 
+    <div class="hero-content">
+        <h1 style="font-family: Tahoma; text-align: center;">ELEVATE YOUR WELLBEING</h1>
+        <p>Join our community to discover a healthier, happier you!</p>
+    </div>
+</div>
+
+    <p>
+        Welcome! Here is your ultimate source of easy, enjoyable, and healthful tips to keep you fit and happy.<br> 
+        We have got you covered whether you are looking for fast exercises, mouthwatering dishes, or methods to treat your mental health and body.<br>
+        We are here to assist you in realizing the best approaches towards self-care while living a fulfilling life.<br>
+        Join us on this quest for improved health through exploration and learning!<br>
+        "Want to be a Health Hero? CHECK OUT our <a href="The Health Info page.html">Health Info page</a> for AWESOME tips on NUTRITION, EXERCISE, and MORE!"
+    </p>	
+
+</body> 
+</html>

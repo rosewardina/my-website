@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Health Info Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  ul {
+    display: none; 
+  }
+  h2 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .arrow {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+  .collapsed .arrow {
+    transform: rotate(90deg); 
+  }
+</style>
+</head>
+<body style="background-color:#FFE4E1;">
+<h1 style="font-family: Tahoma; text-align: center;">HEALTH INFO!</h1>
+
+<div class="container">
+  <div class="center">
+    <button onclick="document.getElementById('myImage').src='healthy1.jpeg'">What's that?</button>
+    <img id="myImage" src="healthy2.jpeg" style="width:250px; margin: 20px 0;">
+    <button onclick="document.getElementById('myImage').src='healthy2.jpeg'">Go back</button>
+  </div>
+</div>
+
+<p style="font-family: Verdana; text-align: center;"> 
+  Great to see you here! On this page, we will help you find very helpful tips 
+  and advice on how to take care of your body and mind. Explore the sections below to 
+  learn more about <b>nutrition, exercise, mental health</b> and <b>how to handle common health issues.</b>
+</p>
+<hr>
+
+<ol>
+<li>
+  <h2 onclick="toggleVisibility('nutritionList', this)">Nutrition Tips <span class="arrow">▶</span></h2>
+  <ul id="nutritionList">
+    <li><a href="https://www.healthline.com/nutrition/eat-the-rainbow"><b>Eat a Rainbow</b></a>: Try to include colorful fruits and vegetables in every meal. Each color provides different vitamins and nutrients that your body needs to stay strong and healthy.</li>
+    <li><a href="https://www.healthline.com/nutrition/29-healthy-snacks-for-weight-loss#_noHeaderPrefixedContent"><b>Healthy Snacks</b></a>: Select healthy snacks such as almonds, yogurt, or fresh fruit in place of sweets. These choices provide energy without making you collapse into sweets.</li>
+    <li><a href="https://www.scripps.org/news_items/6630-6-simple-ways-to-stay-hydrated"><b>Stay Hydrated</b></a>: Maintaining a healthy physique requires drinking water. Try to have at least 6–8 glasses each day, and for added taste, consider adding a piece of cucumber or lemon.</li>
+    <li><a href="https://www.mayoclinic.org/healthy-lifestyle/weight-loss/in-depth/portion-control/art-20546800#:~:text=So%20portion%20control%20is%20important,around%20measuring%20cups%20and%20spoons."><b>Portion Control</b></a>: Appropriate portion proportions allow you to feel satisfied and invigorated without going overboard. When dining, use smaller dishes and eat slowly.</li>
+  </ul>
+</li>
+
+<hr>
+
+<li>
+  <h2 onclick="toggleVisibility('exerciseList', this)">Exercise Tips <span class="arrow">▶</span></h2>
+  <ul id="exerciseList">
+    <li><a href="https://www.youtube.com/watch?v=izvNB5U02c0"><b>Daily Movement</b></a>: Aim to be active for at least an hour every day. This could be playing a sport, jogging, or even just walking.</li>
+    <li><a href="https://www.youtube.com/watch?v=tj0o8aH9vJw"><b>Strength Training</b></a>: Try simple exercises like push-ups, squats, or using light weights to build muscle and stay strong. Start with a few reps and increase as you get stronger.</li>
+    <li><a href="https://www.youtube.com/watch?v=itJE4neqDJw"><b>Stretch it out</b></a>: Don't forget to stretch before and after activities. Stretching helps your muscles stay flexible and prevents injuries.</li>
+    <li><b>Make it Fun</b>: Find activities you enjoy, whether it’s jumping rope, swimming, or playing a game. Exercise doesn’t have to be boring!</li>
+  </ul>
+</li>
+
+<hr>
+
+<li>
+  <h2 onclick="toggleVisibility('mentalHealthList', this)">Mental Health Tips <span class="arrow">▶</span></h2>
+  <ul id="mentalHealthList">
+    <li><b>Mindful Moments:</b> Take a few minutes each day to practice mindfulness. Close your eyes, take deep breaths, and focus on the present moment. It can help you feel calm and centered.</li>
+    <li><b>Talk It Out:</b> If you're feeling sad, anxious, or overwhelmed, don't be afraid to talk to someone you trust, like a parent, friend, or teacher. Sharing your feelings can lighten the load.</li>
+    <li><b>Positive Thinking:</b> Try to focus on the good things in your life. Keeping a gratitude journal, where you write down things you're thankful for, can boost your mood and mental well-being.</li>
+    <li><b>Self-Care Time:</b> Make time for activities that make you happy, whether it’s reading, drawing, or listening to music. Taking care of your mental health is just as important as taking care of your body.</li>
+  </ul>
+</li>
+
+<hr>
+
+<li>
+  <h2 onclick="toggleVisibility('commonHealthList', this)">Common Health Issues <span class="arrow">▶</span></h2>
+  <ul id="commonHealthList">
+    <li><b>Colds & Flu:</b> If you’re feeling under the weather, rest up and drink plenty of fluids. Washing your hands often and avoiding close contact with sick people can help prevent catching a cold or flu.</li>
+    <li><b>Sleep Well:</b> Getting enough sleep is crucial for your health. Aim for 8-10 hours each night. A good sleep routine includes going to bed at the same time each night and keeping your room cool and dark.</li>
+    <li><b>Stress Relief:</b> If you’re feeling stressed, try deep breathing, meditation, or talking to someone you trust. Activities like drawing, listening to music, or spending time outside can also help you relax.</li>
+    <li><b>Healthy Screen Time:</b> Too much screen time can strain your eyes and keep you from getting enough sleep. Try to take breaks every 20 minutes and limit your screen time before bed.</li>
+  </ul>
+</li>
+</ol>
+
+<div style="text-align: center;">
+<h1><a style="font-family: Tahoma;" href ="CALCULATE YOUR BMI HERE!.html"> CALCULATE YOUR BMI HERE!</a></h1>
+</div>
+
+ 
+<h4><a style="font-family: Tahoma;" href ="homepage.html"> << back to previous page</a></h4>
+<script>
+  function toggleVisibility(listId, header) {
+    var list = document.getElementById(listId);
+    var arrow = header.querySelector('.arrow');
+    
+    if (list.style.display === "none") {
+      list.style.display = "block";
+      arrow.style.transform = "rotate(90deg)"; // Point arrow down when expanded
+    } else {
+      list.style.display = "none";
+      arrow.style.transform = "rotate(0deg)"; // Point arrow right when collapsed
+    }
+  }
+  </script>
+
+</body>
+</html>

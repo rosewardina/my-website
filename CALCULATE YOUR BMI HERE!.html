@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>BMI Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="stylecalc.css" rel="stylesheet">
+   
+</head>
+<body>
+    <h1>BMI Calculator</h1>
+    <img src="bmi.jpg" alt="BMI chart" style="width:250px; margin: 20px 0;">
+    
+    <p><b>Body Mass Index (BMI)</b> is a numerical value derived from a person's weight and height.<br> 
+    It is used as a simple and quick screening tool to categorize individuals into different weight categories 
+    that may indicate potential health risks.<br>You can calculate your BMI here:</p>
+    
+    <div class="container">
+        <h2>Calculate Your BMI</h2>
+        <label for="weight">Weight (kg):</label>
+        <input type="text" id="weight" placeholder="Enter your weight in kg" required>
+        <label for="height">Height (cm):</label>
+        <input type="text" id="height" placeholder="Enter your height in cm" required>
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        <div class="result" id="result"></div>
+        <div class="message-box" id="message-box"></div>
+    </div>
+
+    <div class="container categories">
+        <h2>BMI Categories</h2>
+        <div class="category">
+            <p class="category-title"><b>Underweight: BMI < 18.5</b></p>
+            <p>A BMI under 18.5 means you're underweight. This could be due to malnutrition or health issues and may require medical attention.</p>
+        </div>
+        <div class="category">
+            <p class="category-title"><b>Normal weight: BMI 18.5 – 24.9</b></p>
+            <p>A BMI between 18.5 and 24.9 is considered normal, indicating a healthy balance between your height and weight.</p>
+        </div>
+        <div class="category">
+            <p class="category-title"><b>Overweight: BMI 25 – 29.9</b></p>
+            <p>A BMI from 25 to 29.9 is considered overweight. It suggests that you may be at a higher risk for health problems like heart disease or diabetes.</p>
+        </div>
+        <div class="category">
+            <p class="category-title"><b>Obesity: BMI 30 or greater</b></p>
+            <p>A BMI of 30 or higher is classified as obesity. It is associated with a significantly increased risk of various health issues, including heart disease, diabetes, and certain cancers.</p>
+        </div>
+    </div>
+
+   <button class="small-button" onclick="backToTop()">Top</button>
+
+    <!-- Back to Previous Page Link -->
+    <a id="backToPrevLink" href="The Health Info page.html"><< Back to previous page</a>
+
+    <script>
+        function calculateBMI() {
+            var weight = document.getElementById('weight').value;
+            var height = document.getElementById('height').value;
+            var result = document.getElementById('result');
+            var messageBox = document.getElementById('message-box');
+
+            // Clear previous messages
+            result.innerHTML = '';
+            messageBox.innerHTML = '';
+            messageBox.className = 'message-box';
+
+            // Check if inputs are numbers
+            if (isNaN(weight) || isNaN(height) || weight.trim() === '' || height.trim() === '') {
+                alert("PLEASE ENTER A VALID NUMBER FOR YOUR WEIGHT AND HEIGHT, IF YOU'RE REAL HUMAN BRO!");
+                return;
+            }
+
+            weight = parseFloat(weight);
+            height = parseFloat(height);
+
+            if (weight > 0 && height > 0) {   
+                var bmi = weight / ((height / 100) * (height / 100));
+                result.innerHTML = 'Your BMI is ' + bmi.toFixed(2);
+
+                if (bmi < 18.5) {
+                    messageBox.innerHTML = 'Your BMI is underweight. Focus on nourishing your body with more balanced meals to build strength.';
+                    messageBox.className += ' underweight';
+                } else if (bmi >= 18.5 && bmi <= 24.9) {
+                    messageBox.innerHTML = 'Congratulations! Your BMI falls within the normal range. Keep thriving with your healthy habits.';
+                    messageBox.className += ' normal';
+                } else if (bmi >= 25 && bmi <= 29.9) {
+                    messageBox.innerHTML = 'You are overweight. Small adjustments to your routine could make a big difference.';
+                    messageBox.className += ' overweight';
+                } else if (bmi >= 30) {
+                    messageBox.innerHTML = 'Your BMI signals obesity. Prioritizing your health with professional support could lead to meaningful changes.';
+                    messageBox.className += ' obesity';
+                }
+            } else {
+                alert("Please enter positive values for both weight and height.");
+            }
+        }
+
+		function backToTop() {
+		document.body.scrollTop = 0; // For Safari
+		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+	}
+
+		window.onscroll = function() { scrollFunction(); };
+
+		function scrollFunction() {
+		var backToTopBtn = document.getElementById("backToTopBtn");
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopBtn.style.display = "block";
+    } 
+		else {
+        backToTopBtn.style.display = "none";
+    }
+	}
+</script>
+</body>
+</html>

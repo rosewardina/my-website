@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: Verdana;
+	background-color: MistyRose;
+    }
+
+footer {
+    background: linear-gradient(90deg, #0cc0df, #ffde59);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    padding: 10px;
+}
+
+.logo img {
+    width: 200px;
+    margin-right: 20px; /* Space between logo and text */
+}
+
+.footer-content h1 {
+    margin: 0;
+    font-family: Tahoma;
+    color: black;
+}
+
+.footer-content p {
+    margin: 10px 0; /* Space above and below the links */
+}
+
+.footer-content a {
+    margin: 0 15px; /* Space between each link */
+    text-decoration: none;
+    color: black; /* Optional: ensures the links are black */
+}
+
+p {
+    text-align: center;
+}
+a:hover {
+    color: #ffde59;
+    text-decoration: underline;
+}
+
+.logo img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+
+.nav-menu li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #000;
+    padding: 10px;
+}
+
+.nav-menu li:hover > ul {
+    display: block;
+}
+
+.nav-menu ul {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu ul li {
+    margin: 0;
+}
+
+.nav-menu ul a {
+    padding: 10px;
+    color: #000;
+}
+
+.nav-menu ul a:hover {
+    background-color: #ddd;
+}
+ .small-button {
+    display: inline-block; /* Ensure it's treated as an inline element */
+    padding: 5px 10px; /* Smaller padding for a compact button */
+    background-color: #ff4d4d; /* Red background (similar to the image) */
+    color: white; /* White text */
+    border: none; /* No borders */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer/hand icon */
+    font-size: 16px; /* Font size for text */
+    text-align: center; /* Center the text */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Slight shadow for visibility */
+}
+
+.small-button:hover {
+    background-color: #e60000; /* Darker red on hover */
+}
+#backToTopBtn {
+    display: none; /* Hidden by default */
+    /* Other styles */
+}
