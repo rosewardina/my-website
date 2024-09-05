@@ -1,104 +1,219 @@
+/* General Styles */
 body {
     margin: 0;
-    font-family: Verdana;
-	background-color: MistyRose;
-    }
+    font-family: 'Tahoma', sans-serif;
+    background-color: MistyRose;
+    color: #003366;
+}
 
-footer {
-    background: linear-gradient(90deg, #0cc0df, #ffde59);
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Responsive Images */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hero Section */
+.hero-section {
     text-align: center;
-    color: black;
-    padding: 10px;
+    padding: 20px;
 }
 
-.logo img {
-    width: 200px;
-    margin-right: 20px; /* Space between logo and text */
+.hero-content h1 {
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    font-size: 2em;
 }
 
-.footer-content h1 {
-    margin: 0;
-    font-family: Tahoma;
-    color: black;
+.hero-content p {
+    font-size: 1.2em;
 }
 
-.footer-content p {
-    margin: 10px 0; /* Space above and below the links */
+/* Welcome Text */
+.welcome-text {
+    padding: 20px;
+    text-align: center;
 }
 
-.footer-content a {
-    margin: 0 15px; /* Space between each link */
+.call-to-action a {
+    color: #007acc;
     text-decoration: none;
-    color: black; /* Optional: ensures the links are black */
 }
 
-p {
-    text-align: center;
-}
-a:hover {
-    color: #ffde59;
+.call-to-action a:hover {
     text-decoration: underline;
 }
 
-.logo img {
-    transition: transform 0.3s ease-in-out;
+/* Footer Styles */
+footer {
+    background: linear-gradient(90deg, #0cc0df, #ffde59);
+    padding: 20px;
+    text-align: center;
 }
 
-.logo img:hover {
-    transform: scale(1.1);
-}
-
-.nav-menu {
+.footer-container {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: #fff;
 }
 
-.nav-menu li {
-    position: relative;
+.footer-container .logo,
+.footer-container .footer-content {
+    flex: 1 1 100%;
+}
+
+.footer-content h1 {
+    font-family: Tahoma, sans-serif;
+    color: black;
+    margin: 10px 0;
+}
+
+footer nav a {
     margin: 0 15px;
-}
-
-.nav-menu a {
     text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    color: #000;
-    padding: 10px;
+    color: black;
 }
 
-.nav-menu li:hover > ul {
-    display: block;
+footer nav a:hover {
+    color: #ffde59;
 }
 
-.nav-menu ul {
-    display: none;
+/* Video Container */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video-container video {
     position: absolute;
-    top: 30px;
+    top: 0;
     left: 0;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
 }
 
-.nav-menu ul li {
-    margin: 0;
+/* Image Toggle Section */
+.image-toggle-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
-.nav-menu ul a {
+.image-toggle-section button {
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.image-toggle-section img {
+    width: 100%;
+    max-width: 250px;
+    margin: 20px 0;
+}
+
+/* Collapsible Content */
+.collapsible-content {
+    display: none;
+}
+
+.info-list h2 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-list .arrow {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.info-list h2.active .arrow {
+    transform: rotate(90deg);
+}
+
+/* BMI Calculator Styles */
+.container {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    background: lavender;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
     padding: 10px;
-    color: #000;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
 }
 
-.nav-menu ul a:hover {
-    background-color: #ddd;
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #007acc;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+/* Result Messages */
+.message-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1em;
+}
+
+.message-box.underweight {
+    background-color: #ffc107;
+}
+
+.message-box.normal {
+    background-color: #28a745;
+}
+
+.message-box.overweight {
+    background-color: #fd7e14;
+}
+
+.message-box.obesity {
+    background-color: #dc3545;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .footer-container .logo,
+    .footer-container .footer-content {
+        flex: 1;
+    }
+
+    .image-toggle-section {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .image-toggle-section button {
+        margin: 0 10px;
+    }
 }
