@@ -1,7 +1,7 @@
 body {
     font-family: Tahoma, sans-serif;
-    background-color: MistyRose; /* Light Orchid */
-    color: #003366; /* Dark Blue */
+    background-color: MistyRose; 
+    color: #003366; 
     margin: 0;
     padding: 20px;
     display: flex;
@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-    background: lavender; /* Light Lavender */
+    background: lavender; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -21,7 +21,7 @@ body {
 
 h1, h2 {
     text-align: center;
-    color: #005fa3; /* Slightly Darker Blue */
+    color: #005fa3; 
 }
 
 p {
@@ -42,13 +42,13 @@ input {
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    border: 1px solid #cccccc; /* Light Gray */
+    border: 1px solid #cccccc; 
 }
 
 button {
     padding: 10px 15px;
-    background-color: #007acc; /* Medium Blue */
-    color: #ffffff; /* White */
+    background-color: #007acc; 
+    color: #ffffff; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -56,7 +56,7 @@ button {
 }
 
 button:hover {
-    background-color: #005fa3; /* Slightly Darker Blue */
+    background-color: #005fa3; 
 }
 
 button:focus {
@@ -71,50 +71,49 @@ button:focus {
 }
 
 .underweight {
-    background-color: #ffc107; /* Yellow */
+    background-color: #ffc107; 
     padding: 10px;
     border-radius: 5px;
-    color: #ffffff; /* White */
+    color: #ffffff;
 }
 
 .normal {
-    background-color: #28a745; /* Green */
+    background-color: #28a745; 
     padding: 10px;
     border-radius: 5px;
-    color: #ffffff; /* White */
+    color: #ffffff; 
 }
 
 .overweight {
-    background-color: #fd7e14; /* Orange */
+    background-color: #fd7e14; 
     padding: 10px;
     border-radius: 5px;
-    color: #ffffff; /* White */
+    color: #ffffff; 
 }
 
 .obesity {
-    background-color: #dc3545; /* Red */
+    background-color: #dc3545; 
     padding: 10px;
     border-radius: 5px;
-    color: #ffffff; /* White */
+    color: #ffffff;
 }
 
  .small-button {
-    display: inline-block; /* Ensure it's treated as an inline element */
-    padding: 5px 10px; /* Smaller padding for a compact button */
-    background-color: #ff4d4d; /* Red background (similar to the image) */
-    color: white; /* White text */
-    border: none; /* No borders */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer/hand icon */
-    font-size: 16px; /* Font size for text */
-    text-align: center; /* Center the text */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Slight shadow for visibility */
+    display: inline-block; 
+    padding: 5px 10px; 
+    background-color: #ff4d4d; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    text-align: center; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
 }
 
 .small-button:hover {
-    background-color: #e60000; /* Darker red on hover */
+    background-color: #e60000; 
 }
 #backToTopBtn {
-    display: none; /* Hidden by default */
-    /* Other styles */
+    display: none; 
 }
