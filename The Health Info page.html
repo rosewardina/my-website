@@ -3,21 +3,20 @@
 <head>
     <title>The Health Info Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- External CSS -->
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
     <h1>HEALTH INFO!</h1>
 
-    <!-- Image Toggle Section -->
+   
     <div class="image-toggle-section">
         <button onclick="changeImage('healthy1.jpeg')">What's that?</button>
         <img id="myImage" src="healthy2.jpeg" alt="Healthy Image">
         <button onclick="changeImage('healthy2.jpeg')">Go back</button>
     </div>
 
-    <!-- Introduction Text -->
+
     <p>
         Great to see you here! On this page, we will help you find very helpful tips 
         and advice on how to take care of your body and mind. Explore the sections below to 
@@ -25,28 +24,28 @@
     </p>
     <hr>
 
-    <!-- Collapsible Sections -->
+   
     <ol class="info-list">
-        <!-- Nutrition Tips -->
+       
         <li>
             <h2 onclick="toggleVisibility('nutritionList', this)">Nutrition Tips <span class="arrow">▶</span></h2>
             <ul id="nutritionList" class="collapsible-content">
-                <!-- List Items -->
+               
             </ul>
         </li>
-        <!-- Exercise Tips -->
-        <!-- ... Other Sections ... -->
+      
+        
     </ol>
 
-    <!-- BMI Calculator Link -->
+   
     <div class="bmi-link">
         <h1><a href="CALCULATE YOUR BMI HERE!.html">CALCULATE YOUR BMI HERE!</a></h1>
     </div>
 
-    <!-- Back Link -->
+
     <h4><a href="index.html"><< Back to previous page</a></h4>
 
-    <!-- External JavaScript -->
+    
     <script src="script.js"></script>
 </body>
 </html>
